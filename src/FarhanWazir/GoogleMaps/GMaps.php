@@ -172,9 +172,9 @@ class GMaps
 
     public function __construct($config = array())
     {
-        $this->apiKey = config('googlemaps.key');
-        $this->adsensePublisherID = config('googlemaps.adsense_publisher_id');
-        $this->class = config('googlemaps.css_class');
+        $this->apiKey = config('laragooglemaps.key');
+        $this->adsensePublisherID = config('laragooglemaps.adsense_publisher_id');
+        $this->class = config('laragooglemaps.css_class');
 
         if (count($config) > 0) {
             $this->initialize($config);
@@ -2376,7 +2376,7 @@ class GMaps
         }
 
         $context = null;
-        $proxy = config('googlemaps.http_proxy');
+        $proxy = config('laragooglemaps.http_proxy');
         if (!empty($proxy)) {
             $context = stream_context_create([
                 'http' => [
