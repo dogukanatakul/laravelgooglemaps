@@ -20,7 +20,7 @@ class GMapsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/Publishes/config/googlemaps.php' => config_path('googlemaps.php')
+            __DIR__.'/Publishes/config/laragooglemaps.php' => config_path('laragooglemaps.php')
         ], 'config');
 
         $timestamp = date('Y_m_d_His', time());
